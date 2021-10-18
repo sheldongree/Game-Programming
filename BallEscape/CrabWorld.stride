@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="CrabWorld" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <comment xml:space="preserve">(Actor, World, Greenfoot, GreenfootImage)</comment>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Create the crab world (the beach). Our world has a size of 560x560 cells, where every cell is just 1 pixel.</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="560,560,1" params-java="560, 560, 1"/>
+            <body>
+                <call expression="prepare()" expression-java="prepare()" enable="true"/>
+                <call expression="addObject(new Fly(),1,2)" expression-java="addObject( new Fly(), 1, 2)" enable="true"/>
+                <foreach type="int" type-java="int" var="i" collection="0..0" collection-java="lang.stride.Utility.makeRange(0, 0)" enable="true">
+                    <variable type="int" type-java="int" name="x" value="Greenfoot.getRandomNumber(getWidth()-1)" value-java="Greenfoot.getRandomNumber(getWidth() - 1)" enable="true"/>
+                    <variable type="int" type-java="int" name="y" value="Greenfoot.getRandomNumber(getHeight()-1)" value-java="Greenfoot.getRandomNumber(getHeight() - 1)" enable="true"/>
+                    <call expression="addObject(new Fly(),x,y)" expression-java="addObject( new Fly(), x, y)" enable="true"/>
+                </foreach>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="private" type="void" type-java="void" name="prepare" enable="true">
+            <javadoc xml:space="preserve">Prepare the world for the start of the program. That is: create the initial objects and add them to the world.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="Crab" type-java="Crab" name="Crab" value="new Crab()" value-java=" new Crab()" enable="true"/>
+                <call expression="addObject(Crab,266,536)" expression-java="addObject(Crab, 266, 536)" enable="true"/>
+                <variable type="End" type-java="End" name="end" value="new End()" value-java=" new End()" enable="true"/>
+                <call expression="addObject(end,282,47)" expression-java="addObject(end, 282, 47)" enable="true"/>
+                <call expression="Crab.setLocation(283,532)" expression-java="Crab.setLocation(283, 532)" enable="true"/>
+                <variable type="Fly" type-java="Fly" name="crab" value="new Fly()" value-java=" new Fly()" enable="true"/>
+                <call expression="addObject(crab,59,215)" expression-java="addObject(crab, 59, 215)" enable="true"/>
+                <variable type="Fly" type-java="Fly" name="crab2" value="new Fly()" value-java=" new Fly()" enable="true"/>
+                <call expression="addObject(crab2,498,399)" expression-java="addObject(crab2, 498, 399)" enable="true"/>
+                <variable type="Skull" type-java="Skull" name="cactus" value="new Skull()" value-java=" new Skull()" enable="true"/>
+                <call expression="addObject(cactus,78,469)" expression-java="addObject(cactus, 78, 469)" enable="true"/>
+                <variable type="Skull" type-java="Skull" name="cactus2" value="new Skull()" value-java=" new Skull()" enable="true"/>
+                <call expression="addObject(cactus2,113,84)" expression-java="addObject(cactus2, 113, 84)" enable="true"/>
+                <variable type="Skull" type-java="Skull" name="cactus3" value="new Skull()" value-java=" new Skull()" enable="true"/>
+                <call expression="addObject(cactus3,352,47)" expression-java="addObject(cactus3, 352, 47)" enable="true"/>
+                <call expression="cactus2.setLocation(43,59)" expression-java="cactus2.setLocation(43, 59)" enable="true"/>
+                <call expression="cactus3.setLocation(522,58)" expression-java="cactus3.setLocation(522, 58)" enable="true"/>
+                <call expression="cactus.setLocation(36,523)" expression-java="cactus.setLocation(36, 523)" enable="true"/>
+                <variable type="Skull" type-java="Skull" name="cactus4" value="new Skull()" value-java=" new Skull()" enable="true"/>
+                <call expression="addObject(cactus4,516,513)" expression-java="addObject(cactus4, 516, 513)" enable="true"/>
+                <call expression="cactus3.setLocation(524,40)" expression-java="cactus3.setLocation(524, 40)" enable="true"/>
+                <call expression="cactus2.setLocation(47,69)" expression-java="cactus2.setLocation(47, 69)" enable="true"/>
+                <call expression="cactus.setLocation(35,532)" expression-java="cactus.setLocation(35, 532)" enable="true"/>
+                <call expression="cactus4.setLocation(515,519)" expression-java="cactus4.setLocation(515, 519)" enable="true"/>
+                <call expression="cactus2.setLocation(44,78)" expression-java="cactus2.setLocation(44, 78)" enable="true"/>
+                <call expression="cactus2.setLocation(39,53)" expression-java="cactus2.setLocation(39, 53)" enable="true"/>
+                <call expression="cactus.setLocation(40,504)" expression-java="cactus.setLocation(40, 504)" enable="true"/>
+                <call expression="cactus4.setLocation(516,516)" expression-java="cactus4.setLocation(516, 516)" enable="true"/>
+                <call expression="crab2.setLocation(458,285)" expression-java="crab2.setLocation(458, 285)" enable="true"/>
+                <call expression="crab2.setLocation(423,356)" expression-java="crab2.setLocation(423, 356)" enable="true"/>
+                <call expression="removeObject(crab2)" expression-java="removeObject(crab2)" enable="true"/>
+                <call expression="crab.setLocation(52,303)" expression-java="crab.setLocation(52, 303)" enable="true"/>
+                <variable type="Star" type-java="Star" name="straw" value="new Star()" value-java=" new Star()" enable="true"/>
+                <call expression="addObject(straw,Greenfoot.getRandomNumber(560),Greenfoot.getRandomNumber(560))" expression-java="addObject(straw, Greenfoot.getRandomNumber(560), Greenfoot.getRandomNumber(560))" enable="true"/>
+                <variable type="Star" type-java="Star" name="straw2" value="new Star()" value-java=" new Star()" enable="true"/>
+                <call expression="addObject(straw2,Greenfoot.getRandomNumber(560),Greenfoot.getRandomNumber(560))" expression-java="addObject(straw2, Greenfoot.getRandomNumber(560), Greenfoot.getRandomNumber(560))" enable="true"/>
+                <variable type="Star" type-java="Star" name="straw3" value="new Star()" value-java=" new Star()" enable="true"/>
+                <call expression="addObject(straw3,Greenfoot.getRandomNumber(560),Greenfoot.getRandomNumber(560))" expression-java="addObject(straw3, Greenfoot.getRandomNumber(560), Greenfoot.getRandomNumber(560))" enable="true"/>
+                <call expression="addObject(straw3,501,194)" expression-java="addObject(straw3, 501, 194)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>

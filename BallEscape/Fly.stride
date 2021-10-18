@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="Fly" extends="Actor" extends-java="Actor" enable="true" strideversion="1">
+    <javadoc xml:space="preserve">This class defines a crab. Crabs live on the beach.</javadoc>
+    <imports>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors/>
+    <methods>
+        <method access="public" type="void" type-java="void" name="act" enable="true">
+            <javadoc xml:space="preserve">This method defines what the crab does.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <call expression="move(5)" expression-java="move(5)" enable="true"/>
+                <if condition="Greenfoot.getRandomNumber(100)&lt;50" condition-java="Greenfoot.getRandomNumber(100) &lt; 50" enable="true">
+                    <ifStatements>
+                        <call expression="turn(Greenfoot.getRandomNumber(90)-40)" expression-java="turn(Greenfoot.getRandomNumber(90) - 40)" enable="true"/>
+                    </ifStatements>
+                </if>
+                <if condition="isTouching(Crab.class)" condition-java="isTouching(Crab.class)" enable="true">
+                    <ifStatements>
+                        <call expression="Greenfoot.stop()" expression-java="Greenfoot.stop()" enable="true"/>
+                    </ifStatements>
+                </if>
+            </body>
+        </method>
+    </methods>
+</class>
